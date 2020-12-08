@@ -7,7 +7,7 @@ function App() {
     const thirdItem = 'Profit'
     const list = [firstItem, secondItem, thirdItem]
     const listItems = list.map((eachItem, index) => {
-        return <ListItem doThis={eachItem} key={`list-item-$${index}`} />
+        return <ListItem doThis={eachItem} key={`item-${index}`} />
     })
     
     return (
