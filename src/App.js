@@ -3,17 +3,21 @@ import ListItem from './components/ListItem'
 
 function App() {
     
-    const doThis1 = 'a thing'
-    const doThis2 = 'another thing'
-    const doThis3 = 'yet another thing'
+    const doThis1 = 'Learn React'
+    const doThis2 = '???'
+    const doThis3 = 'Profit'
+
+    const list = [doThis1, doThis2, doThis3]
+
+    const listItems = list.map((eachItem, index) => {
+        return <ListItem doThis={eachItem} key={`list-item-$${index}`} />
+    })
     
     return (
         <div>
             <h1>My List</h1>
             <ul>
-                <ListItem item={doThis1} />
-                <ListItem item={doThis2} />
-                <ListItem item={doThis3} />
+                {listItems}
             </ul>
         </div>
     )

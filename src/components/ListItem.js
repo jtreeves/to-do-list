@@ -1,7 +1,7 @@
 function ListItem(props) {
     return (
         <div>
-            <li>{props.item}</li>
+            <li>{props.doThis}</li>
         </div>
     )
 }
