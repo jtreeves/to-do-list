@@ -2,10 +2,10 @@ import './App.css'
 import ListItem from './components/ListItem'
 
 function App() {
-    const doThis1 = 'Learn React'
-    const doThis2 = '???'
-    const doThis3 = 'Profit'
-    const list = [doThis1, doThis2, doThis3]
+    const firstItem = 'Learn React'
+    const secondItem = '???'
+    const thirdItem = 'Profit'
+    const list = [firstItem, secondItem, thirdItem]
     const listItems = list.map((eachItem, index) => {
         return <ListItem doThis={eachItem} key={`list-item-$${index}`} />
     })
