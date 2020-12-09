@@ -11,7 +11,7 @@ function App() {
         return <ListItem doThis={eachItem} key={`item-${index}`} />
     })
 
-    const clearList = () => {
+    const eliminateFirst = () => {
         const deleteFirst = list.splice(1,(list.length - 1))
         setList(deleteFirst)
     }
@@ -22,7 +22,7 @@ function App() {
             <ul>
                 {listItems}
             </ul>
-            <button onClick={clearList}>Clear All</button>
+            <button onClick={eliminateFirst}>Eliminate First Item</button>
         </div>
     )
 }
