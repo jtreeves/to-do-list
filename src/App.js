@@ -29,7 +29,11 @@ function App() {
             <ul>
                 {listItems}
             </ul>
-            <input type='text' name='newItem' onChange={(event) => addItem(event.target.value)} />
+            <input
+                type='text'
+                name='newItem'
+                onChange={(event) => addItem(event.target.value)}
+            />
             <button onClick={addLast}>Add Item</button>
             <button onClick={deleteFirst}>Delete Item</button>
         </div>
