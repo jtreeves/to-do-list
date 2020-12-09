@@ -1,14 +1,20 @@
 import './App.css'
 import ListItem from './components/ListItem'
+import React, { useState } from 'react'
 
 function App() {
     const firstItem = 'Learn React'
     const secondItem = '???'
     const thirdItem = 'Profit'
-    const list = [firstItem, secondItem, thirdItem]
+    const [list, setList] = useState([firstItem, secondItem, thirdItem])
     const listItems = list.map((eachItem, index) => {
         return <ListItem doThis={eachItem} key={`item-${index}`} />
     })
+
+    const clearList = () => {
+        const deleteFirst = list.splice(1,(list.length - 1))
+        setList(deleteFirst)
+    }
     
     return (
         <div>
@@ -16,6 +22,7 @@ function App() {
             <ul>
                 {listItems}
             </ul>
+            <button onClick={clearList}>Clear All</button>
         </div>
     )
 }
